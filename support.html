@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="hu">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Culturize – Támogatás / Support</title>
+<style>
+  :root {
+    --navy: #012B51;
+    --deepBlue: #014E75;
+    --teal: #018597;
+    --turquoise: #01C9C9;
+    --coral: #EB585A;
+    --grey: #566E82;
+    --lightGrey: #E1E8EC;
+    --white: #FFFFFF;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--white);
+    color: var(--navy);
+    line-height: 1.6;
+  }
+  .hero {
+    background: linear-gradient(135deg, var(--navy), var(--teal));
+    color: var(--white);
+    padding: 48px 24px 32px;
+    text-align: center;
+    position: relative;
+  }
+  .hero h1 {
+    margin: 0 0 8px;
+    font-size: 26px;
+  }
+  .hero p {
+    margin: 0;
+    opacity: 0.9;
+    font-size: 15px;
+  }
+  .lang-switch {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+  }
+  .lang-btn {
+    border: 1px solid rgba(255,255,255,0.5);
+    background: transparent;
+    color: var(--white);
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    font-family: inherit;
+  }
+  .lang-btn.active {
+    background: var(--white);
+    color: var(--navy);
+    border-color: var(--white);
+  }
+  .container {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 32px 24px 64px;
+  }
+  .card {
+    background: var(--white);
+    border: 1px solid var(--lightGrey);
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 20px;
+  }
+  .card h2 {
+    margin-top: 0;
+    font-size: 18px;
+    color: var(--navy);
+  }
+  .card p {
+    color: var(--grey);
+    font-size: 15px;
+    margin-bottom: 0;
+  }
+  .email-btn {
+    display: inline-block;
+    margin-top: 12px;
+    background: var(--teal);
+    color: var(--white);
+    text-decoration: none;
+    padding: 12px 20px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 15px;
+  }
+  .faq-item {
+    margin-bottom: 18px;
+  }
+  .faq-item:last-child {
+    margin-bottom: 0;
+  }
+  .faq-q {
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 4px;
+    font-size: 15px;
+  }
+  .faq-a {
+    color: var(--grey);
+    font-size: 14.5px;
+    margin: 0;
+  }
+  footer {
+    text-align: center;
+    color: var(--grey);
+    font-size: 13px;
+    padding-bottom: 24px;
+  }
+  .lang-content { display: none; }
+  .lang-content.active { display: block; }
+</style>
+</head>
+<body>
+  <div class="hero">
+    <div class="lang-content active" data-lang="hu">
+      <h1>Culturize – Támogatás</h1>
+      <p>Segítünk, ha elakadtál vagy kérdésed van az alkalmazással kapcsolatban.</p>
+    </div>
+    <div class="lang-content" data-lang="en">
+      <h1>Culturize – Support</h1>
+      <p>We're here to help if you're stuck or have questions about the app.</p>
+    </div>
+    <div class="lang-switch">
+      <button class="lang-btn active" data-setlang="hu" onclick="setLang('hu')">Magyar</button>
+      <button class="lang-btn" data-setlang="en" onclick="setLang('en')">English</button>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="lang-content active" data-lang="hu">
+      <div class="card">
+        <h2>Kapcsolat</h2>
+        <p>Ha hibát találtál, kérdésed van a Prémium feloldással kapcsolatban, vagy visszajelzést szeretnél adni, írj nekünk bátran.</p>
+        <a class="email-btn" href="mailto:support.culturize@gmail.com">support.culturize@gmail.com</a>
+      </div>
+
+      <div class="card">
+        <h2>Gyakori kérdések</h2>
+
+        <div class="faq-item">
+          <div class="faq-q">Hogyan váltok nyelvet az alkalmazásban?</div>
+          <p class="faq-a">A Beállítások menüben válaszd ki a kívánt nyelvet a nyelvválasztó listából. Jelenleg 11 nyelven érhető el az app.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Mit tartalmaz a Prémium feloldás?</div>
+          <p class="faq-a">A Prémium feloldás egyszeri, élethosszig tartó vásárlás, amely minden ország és téma tartalmát korlátozás nélkül elérhetővé teszi, nincs hozzá előfizetés.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Elveszett a vásárlásom, mit tegyek?</div>
+          <p class="faq-a">A Prémium képernyőn koppints a "Korábbi vásárlás visszaállítása" gombra, ugyanazzal az Apple ID-vel bejelentkezve, amivel a vásárlás történt.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">Hogyan törölhetem az adataimat?</div>
+          <p class="faq-a">Az app minden adatot (kedvencek, utazási profil) kizárólag a telefonodon tárol. Az alkalmazás törlése a telefonról egyben az összes helyi adatot is eltávolítja.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="lang-content" data-lang="en">
+      <div class="card">
+        <h2>Contact</h2>
+        <p>If you've found a bug, have a question about the Premium unlock, or want to share feedback, feel free to reach out.</p>
+        <a class="email-btn" href="mailto:support.culturize@gmail.com">support.culturize@gmail.com</a>
+      </div>
+
+      <div class="card">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item">
+          <div class="faq-q">How do I change the app's language?</div>
+          <p class="faq-a">Open Settings and choose your preferred language from the language picker. The app currently supports 11 languages.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">What does the Premium unlock include?</div>
+          <p class="faq-a">The Premium unlock is a one-time, lifetime purchase that gives you unrestricted access to all countries and topics in the app. There's no subscription involved.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">I lost my purchase — what should I do?</div>
+          <p class="faq-a">On the Premium screen, tap "Restore Purchase" while signed in with the same Apple ID used for the original purchase.</p>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-q">How do I delete my data?</div>
+          <p class="faq-a">The app stores all data (favorites, travel profile) locally on your device only. Deleting the app from your phone removes all local data as well.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2026 Culturize. All rights reserved. / Minden jog fenntartva.
+  </footer>
+
+  <script>
+    function setLang(lang) {
+      document.querySelectorAll('.lang-content').forEach(function(el) {
+        el.classList.toggle('active', el.getAttribute('data-lang') === lang);
+      });
+      document.querySelectorAll('.lang-btn').forEach(function(btn) {
+        btn.classList.toggle('active', btn.getAttribute('data-setlang') === lang);
+      });
+      document.documentElement.lang = lang;
+    }
+  </script>
+</body>
+</html>
