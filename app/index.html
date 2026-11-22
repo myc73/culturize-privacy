@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Culturize Travel – Know the rules before you land</title>
+<meta name="description" content="Visa, laws, customs and local tips for 70 countries – compared with your home country. Free on the App Store.">
+<meta property="og:title" content="Culturize Travel">
+<meta property="og:description" content="Know the rules before you land. 70 countries, compared with your home country.">
+<meta property="og:image" content="icon.png">
+<meta name="apple-itunes-app" content="app-id=6819018433">
+<link rel="icon" href="icon.png">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&display=swap" rel="stylesheet">
+<style>
+:root{--navy:#012B51;--deep:#014E75;--teal:#018597;--turq:#01C9C9;--coral:#EB585A;--grey:#566E82;--light:#E1E8EC}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Sora,system-ui,-apple-system,sans-serif;background:linear-gradient(165deg,var(--navy) 0%,var(--deep) 55%,var(--teal) 100%);color:#fff;min-height:100vh;min-height:100dvh;display:flex;justify-content:center}
+main{width:100%;max-width:440px;padding:40px 22px 28px;display:flex;flex-direction:column;align-items:center;text-align:center}
+.icon{width:96px;height:96px;border-radius:22px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+.name{margin-top:14px;font-weight:800;font-size:22px;letter-spacing:.2px}
+.name span{color:var(--turq)}
+h1{margin-top:26px;font-weight:800;font-size:34px;line-height:1.12}
+h1 em{font-style:normal;color:var(--turq)}
+.sub{margin-top:14px;font-size:16px;line-height:1.5;color:#d6e4ec}
+ul{list-style:none;margin-top:26px;width:100%;display:grid;gap:10px;text-align:left}
+li{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:14px;padding:13px 14px;font-size:15px;line-height:1.35;display:flex;gap:12px;align-items:center}
+li b{font-size:20px;width:26px;text-align:center;flex:none}
+.cta{margin-top:28px;display:block;width:100%;background:var(--coral);color:#fff;text-decoration:none;font-weight:700;font-size:18px;padding:17px 20px;border-radius:16px;box-shadow:0 8px 22px rgba(235,88,90,.45)}
+.cta small{display:block;font-weight:400;font-size:13px;opacity:.9;margin-top:3px}
+.alt{margin-top:12px;font-size:13px;color:#bcd2de}
+.alt a{color:#fff}
+.hint{display:none;margin-top:14px;background:rgba(0,0,0,.25);border-radius:12px;padding:12px;font-size:13px;line-height:1.45;color:#e8f1f5}
+.android{display:none;margin-top:14px;font-size:14px;color:#e8f1f5}
+footer{margin-top:auto;padding-top:30px;font-size:12px;color:#9fbccb}
+footer a{color:#cfe2ea}
+</style>
+</head>
+<body>
+<main>
+  <img class="icon" src="icon.png" alt="Culturize Travel app icon">
+  <div class="name">Culturize <span>Travel</span></div>
+  <h1 data-t="h1">Know the rules <em>before you land.</em></h1>
+  <p class="sub" data-t="sub">Visa, laws, customs and local tips for 70 countries – compared with where you come from.</p>
+  <ul>
+    <li><b>🛂</b><span data-t="b1">Do you need a visa, ETA or e-Visa? See it instantly.</span></li>
+    <li><b>⚠️</b><span data-t="b2">What's normal at home but gets you fined abroad.</span></li>
+    <li><b>✈️</b><span data-t="b3">Trip checklist, SOS numbers and phrases – works offline.</span></li>
+  </ul>
+  <a class="cta" id="cta" href="https://apps.apple.com/app/apple-store/id6819018433?pt=129531694&ct=tiktok_bio&mt=8"><span data-t="cta">Get it free on the App Store</span><small data-t="ctas">iPhone · 12 languages</small></a>
+  <p class="alt" data-t-html="alt">Button not working? <a id="alt" href="https://apps.apple.com/app/apple-store/id6819018433?pt=129531694&ct=tiktok_bio&mt=8" target="_blank" rel="noopener">Open the App Store page</a></p>
+  <p class="hint" id="hint" data-t="hint">Tip: tap ⋯ in the top-right corner and choose “Open in browser”, then tap the button again.</p>
+  <p class="android" id="android" data-t="android">Android version coming soon.</p>
+  <footer><a href="../">Privacy policy</a> · support.culturize@gmail.com</footer>
+</main>
+<script>
+(function(){
+  var ua=navigator.userAgent||"";
+  var inApp=/TikTok|musical_ly|Bytedance|BytedanceWebview|Instagram|FBAN|FBAV/i.test(ua);
+  var ios=/iPhone|iPad|iPod/i.test(ua);
+  var android=/Android/i.test(ua);
+  var base="apps.apple.com/app/apple-store/id6819018433?pt=129531694&ct="+encodeURIComponent((new URLSearchParams(location.search).get("c")||"tiktok_bio").replace(/[^a-z0-9_]/gi,"").slice(0,30))+"&mt=8";
+  var cta=document.getElementById("cta"), alt=document.getElementById("alt");
+  alt.href="https://"+base;
+  cta.href=(ios&&inApp)?"itms-apps://"+base:"https://"+base;
+  if(inApp) document.getElementById("hint").style.display="block";
+  if(android) document.getElementById("android").style.display="block";
+  var hu=/^hu/i.test(navigator.language||"");
+  if(hu){
+    var T={h1:'Ismerd a szabályokat, <em>mielőtt landolsz.</em>',sub:"Vízum, törvények, szokások és helyi tippek 70 országra – összevetve azzal, ahonnan jössz.",b1:"Kell vízum, ETA vagy e-vízum? Egy pillantás alatt látod.",b2:"Ami otthon természetes, külföldön büntetést érhet.",b3:"Úti teendők, segélyhívó számok, kifejezések – offline is.",cta:"Ingyenes letöltés az App Store-ból",ctas:"iPhone · 12 nyelven",alt:'Nem működik a gomb? <a href="'+alt.href+'" target="_blank" rel="noopener">Nyisd meg az App Store-oldalt</a>',hint:"Tipp: koppints jobb felül a ⋯ gombra, válaszd a „Megnyitás böngészőben” lehetőséget, majd koppints újra a gombra.",android:"Az Android-verzió hamarosan érkezik."};
+    document.documentElement.lang="hu";
+    document.querySelectorAll("[data-t]").forEach(function(e){var k=e.getAttribute("data-t"); if(T[k]!=null){ if(k==="h1") e.innerHTML=T[k]; else e.textContent=T[k]; }});
+    document.querySelectorAll("[data-t-html]").forEach(function(e){e.innerHTML=T[e.getAttribute("data-t-html")];});
+    document.querySelector("footer a").textContent="Adatvédelmi tájékoztató";
+  }
+})();
+</script>
+</body>
+</html>
